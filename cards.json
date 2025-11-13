@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Agende seu horário",
+    "text": "Clique aqui para falar comigo no WhatsApp e agendar seu atendimento!",
+    "image": "assets/whatsapp.jpg",
+    "link": "https://wa.me/5599999999999"
+  },
+  {
+    "title": "Tabela de Preços",
+    "text": "Veja os valores dos procedimentos e escolha o ideal para você.",
+    "image": "assets/tabela.jpg",
+    "link": "https://www.canva.com/link-da-tabela"
+  },
+  {
+    "title": "Localização do Estúdio",
+    "text": "Veja no mapa como chegar até mim.",
+    "image": "assets/localizacao.jpg",
+    "link": "https://maps.google.com"
+  },
+  {
+    "title": "Parcerias Comerciais",
+    "text": "Quer colaborar? Entre em contato e vamos conversar!",
+    "image": "assets/parcerias.jpg",
+    "link": "https://wa.me/5599999999999"
+  },
+  {
+    "title": "Conheça Meu Trabalho",
+    "text": "Veja os resultados incríveis das minhas clientes!",
+    "image": "assets/clientes1.jpg",
+    "link": "#"
+  }
+]

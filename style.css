@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff5f7;
+  color: #3b0a0a;
+  scroll-behavior: smooth;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #c2185b, #ff8a80);
+  color: white;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px; /* Espaçamento entre os cards */
+  padding: 60px 0;
+  background-color: #fff5f7;
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 80vh; /* ocupa parte da tela, sem cobrir tudo */
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffb3c1; /* borda em tom carmim claro */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card .overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.card h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background: #c2185b;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9em;
+}
+
+.hero-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* cor de fundo neutra */
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  /* border-bottom: 5px solid #a10035; */ /* ← remova ou comente */
+}
+
