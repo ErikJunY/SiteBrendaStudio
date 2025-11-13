@@ -99,7 +99,9 @@ footer {
   max-width: 700px;    /* limite máximo para não ficar gigante em telas grandes */
   height: auto;        /* mantém proporção */
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
+  border-radius: 20px; /* arredonda as pontas */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
   /* border-bottom: 5px solid #a10035; */ /* ← remova ou comente */
 }
 
