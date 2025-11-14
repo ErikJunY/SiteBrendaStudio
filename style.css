@@ -92,9 +92,12 @@ footer {
 /* Hero Section */
 .hero-section {
   width: 100%;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical */
+  box-sizing: border-box; 
   background-color: #9a5d69;
 }
 
