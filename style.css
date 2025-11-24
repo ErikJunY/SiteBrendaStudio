@@ -124,39 +124,49 @@ footer {
 /* MODO CELULAR */
 @media (max-width: 600px) {
 
-  /* Deixar o hero-image quase tela cheia */
+  /* Hero grande e centralizada */
   .hero-image {
-    width: 90%;
+    width: 92%;
     margin: 20px auto;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   }
 
-  /* GRID no celular: CENTRALIZA 100% */
+  /* GRID sem padding e centralizado REAL */
   #cards-container {
-    grid-template-columns: 1fr !important;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 25px;
-    padding: 0; /* REMOVE padding que empurrava pra direita */
+    padding: 0;
+    margin: 0;
     width: 100%;
-    justify-items: center; /* CENTRALIZA OS CARDS */
+    justify-content: center;
+    justify-items: center; /* AQUI CENTRALIZA DE VERDADE */
   }
 
-  /*CARD – Centralizado 100% na tela */
+  /* TODOS os cards ficam 92% da tela */
   #cards-container .card {
-    width: 90% !important;  /* REDUZ para ficar perfeitamente centralizado */
-    max-width: 90% !important;
+    width: 92% !important;
     height: 260px !important;
+    max-width: 92% !important;
+    margin: 0 auto;
+    justify-self: center; /* GARANTE a centralização */
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    background-size: contain !important;   /* tira o zoom */
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: #ffffff; /* fundo branco */
   }
 
-  /* Último card igual aos outros */
+  /* Último card vira igual aos outros */
   #cards-container .card:last-child {
     grid-column: span 1 !important;
-    width: 90% !important;
-    max-width: 90% !important;
+    width: 92% !important;
+    max-width: 92% !important;
     height: 260px !important;
   }
 }
+
 
 
