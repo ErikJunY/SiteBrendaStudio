@@ -27,22 +27,32 @@ header p {
   opacity: 0.9;
 }
 
-/* Main */
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 80px;
-  padding: 60px 0;
-  background-color: transparent;
+/* Main – Grid */
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  gap: 40px;
+  width: 100%;
+  justify-content: center;
+  padding: 40px 20px;
 }
 
-/* Cards */
+/* Último card (retângulo largo) */
+#cards-container .card:last-child {
+  grid-column: span 2;
+  width: 100%;
+  max-width: 1040px;
+  height: 320px !important; /* mesma altura dos outros cards */
+  aspect-ratio: unset; /* remove formato automático */
+}
+
+/* Cards quadrados */
 .card {
+  width: 100%;
+  max-width: 500px;
+  height: 320px;
+
   position: relative;
-  width: 75%;
-  max-width: 1000px;
-  height: 80vh; /* ajusta altura automaticamente */
   border-radius: 20px;
   overflow: hidden;
   background-size: cover;
@@ -51,7 +61,6 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
   color: white;
   cursor: pointer;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
@@ -59,25 +68,26 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Overlay */
 .card .overlay {
   background-color: rgba(0, 0, 0, 0.45);
-  padding: 40px;
+  padding: 20px;
   border-radius: 12px;
 }
 
 .card h2 {
-  font-size: 2.2em;
-  margin-bottom: 10px;
+  font-size: 1.4em;
+  margin-bottom: 8px;
 }
 
 .card p {
-  font-size: 1.1em;
+  font-size: 0.9em;
   opacity: 0.9;
 }
 
+/* Hover */
 .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -95,9 +105,8 @@ footer {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center; /* centraliza horizontal */
-  align-items: center;     /* centraliza vertical */
-  box-sizing: border-box; 
+  justify-content: center;
+  align-items: center;
   background-color: #9a5d69;
 }
 
@@ -112,11 +121,15 @@ footer {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsividade para celulares */
+/* Modo celular */
 @media (max-width: 600px) {
-  .hero-image, .card {
-    width: 95%;
+  #cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  #cards-container .card:last-child {
+    grid-column: span 1;
     max-width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1; /* mantém quadrado no celular */
   }
 }
