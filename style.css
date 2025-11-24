@@ -121,50 +121,51 @@ footer {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* MODO CELULAR */
 @media (max-width: 600px) {
 
-  /* Hero grande e centralizada */
+  /* Hero no centro e quase tela cheia */
   .hero-image {
-    width: 92%;
+    width: 94%;
     margin: 20px auto;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   }
 
-  /* GRID sem padding e centralizado REAL */
+  /* GRID 100% sem padding lateral e centralizado REAL */
   #cards-container {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 25px;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    justify-content: center;
-    justify-items: center; /* AQUI CENTRALIZA DE VERDADE */
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    justify-items: center !important;
   }
 
-  /* TODOS os cards ficam 92% da tela */
+  /* CARDS 100% centralizados e SEM ZOOM */
   #cards-container .card {
-    width: 92% !important;
+    width: 94% !important;
+    max-width: 94% !important;
     height: 260px !important;
-    max-width: 92% !important;
+
     margin: 0 auto;
-    justify-self: center; /* GARANTE a centralização */
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    background-size: contain !important;   /* tira o zoom */
+
+    /* Centralização garantida */
+    justify-self: center !important;
+
+    /* Tira zoom e mantém imagem inteira */
+    background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
-    background-color: #ffffff; /* fundo branco */
+
+    /* IMPORTANTE: retirar o fundo branco que estava por cima da imagem */
+    background-color: transparent !important;
   }
 
-  /* Último card vira igual aos outros */
+  /* Último card igual aos outros */
   #cards-container .card:last-child {
-    grid-column: span 1 !important;
-    width: 92% !important;
-    max-width: 92% !important;
+    width: 94% !important;
     height: 260px !important;
+    grid-column: span 1 !important;
   }
 }
 
