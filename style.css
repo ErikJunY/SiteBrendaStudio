@@ -180,3 +180,37 @@ footer {
     grid-column: span 1 !important;
   }
 }
+
+/* iPad / Tablets — mesmo estilo do celular, altura proporcional */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #cards-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 25px;
+    padding: 0 3% 20px; /* pequenas bordas laterais */
+    justify-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #cards-container .card {
+    width: 94%;          /* quase toda largura */
+    max-width: none;
+    height: 400px;       /* altura aumentada proporcional ao iPad */
+    margin: 0 auto;
+    border-radius: 20px; 
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  #cards-container .card:last-child {
+    width: 94%;          
+    height: 430px !important; /* mesma altura dos outros */
+    grid-column: auto !important;
+  }
+}
+
+
+
+
+
