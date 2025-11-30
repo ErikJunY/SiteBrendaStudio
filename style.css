@@ -12,7 +12,13 @@ html, body {
 /* Header */
 header {
   text-align: center;
-  padding: 5px 20px;
+
+  /* --- Ajustes individuais --- */
+  padding-top: 0px;     /* distância do topo do site até a imagem */
+  padding-bottom: 0px; /* distância da imagem até os cards */
+  padding-left: 20px;
+  padding-right: 20px;
+
   background-color: #9e727c;
   color: white;
 }
@@ -34,7 +40,10 @@ header p {
   gap: 40px;
   width: 100%;
   justify-content: center;
-  padding: 0px 20px;
+  padding-top: 0px; /* ajuste aqui */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
 }
 
 /* Último card (retângulo largo) */
@@ -42,8 +51,9 @@ header p {
   grid-column: span 2;
   width: 100%;
   max-width: 1040px;
-  height: 320px !important; /* mesma altura dos outros cards */
+  height: 620px !important; /* mesma altura dos outros cards */
   aspect-ratio: unset; /* remove formato automático */
+  cursor: default;
 }
 
 /* Cards quadrados */
@@ -127,14 +137,17 @@ footer {
     width: 94%;
     margin: 20px auto;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    box-shadow: none !important;
   }
 
   /* GRID 100% sem padding lateral e centralizado REAL */
   #cards-container {
     grid-template-columns: 1fr;
     gap: 25px;
-    padding: 0 !important;
+    padding-top: 0 !important; /* distância sob medida */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 20px !important;
     margin: 0 !important;
     width: 100% !important;
     justify-items: center !important;
@@ -144,7 +157,7 @@ footer {
   #cards-container .card {
     width: 94% !important;
     max-width: 94% !important;
-    height: 260px !important;
+    height: 240px !important;
 
     margin: 0 auto;
 
@@ -152,7 +165,7 @@ footer {
     justify-self: center !important;
 
     /* Tira zoom e mantém imagem inteira */
-    background-size: contain !important;
+    background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
 
@@ -163,7 +176,7 @@ footer {
   /* Último card igual aos outros */
   #cards-container .card:last-child {
     width: 94% !important;
-    height: 260px !important;
+    height: 240px !important;
     grid-column: span 1 !important;
   }
 }
