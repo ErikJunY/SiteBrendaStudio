@@ -212,6 +212,61 @@ footer {
   }
 }
 
+/* Força layout mobile REAL, mesmo no modo "Versão para computador" */
+@media (max-device-width: 600px) {
+
+  /* Hero no centro e quase tela cheia */
+  .hero-image {
+    width: 94%;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: none !important;
+  }
+
+  /* GRID 100% sem padding lateral e centralizado REAL */
+  #cards-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 20px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    justify-items: center !important;
+  }
+
+  /* CARDS 100% centralizados e SEM ZOOM */
+  #cards-container .card {
+    width: 94% !important;
+    max-width: 94% !important;
+    aspect-ratio: 5 / 3 !important;  /* 🔥 MESMO PROPORCIONAL DO SEU BLOCO MOBILE */
+    height: auto !important;
+
+    margin: 0 auto;
+
+    /* Centralização garantida */
+    justify-self: center !important;
+
+    /* Imagem totalmente ajustada */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+
+    background-color: transparent !important;
+  }
+
+  /* Último card igual aos outros */
+  #cards-container .card:last-child {
+    width: 94% !important;
+    aspect-ratio: 5 / 3 !important;
+    height: auto !important;
+    grid-column: span 1 !important;
+  }
+}
+
+
+
 
 
 
