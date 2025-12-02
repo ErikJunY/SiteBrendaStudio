@@ -157,7 +157,8 @@ footer {
   #cards-container .card {
     width: 94% !important;
     max-width: 94% !important;
-    height: 240px !important;
+    aspect-ratio: 5 / 3 !important;  /* 🔥 RESPONSIVO DE VERDADE */
+    height: auto !important;
 
     margin: 0 auto;
 
@@ -176,7 +177,8 @@ footer {
   /* Último card igual aos outros */
   #cards-container .card:last-child {
     width: 94% !important;
-    height: 240px !important;
+    aspect-ratio: 5 / 3 !important;
+    height: auto !important;
     grid-column: span 1 !important;
   }
 }
